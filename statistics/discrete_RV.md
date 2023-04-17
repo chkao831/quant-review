@@ -26,7 +26,50 @@ $$
 
 ## Binomial Distribution
 
+### Definition
+The binomial distribution is a discrete probability distribution that describes the number of successes in a fixed number of independent trials, where each trial has the same probability of success. It is denoted by $B(n,p)$, where $n$ is the number of trials and $p$ is the probability of success in each trial. 
 
+- PMF
+
+$$
+\mathrm{P}(X=r)=\left(\begin{array}{c}
+n \\
+r
+\end{array}\right) p^r(1-p)^{n-r}
+$$
+
+where $X$ is the random variable representing the number of successes in $n$ trials, $k$ is the number of successes, and $\binom{n}{k}$ is the binomial coefficient, which represents the number of ways to choose $k$ successes out of $n$ trials. 
+
+- EV
+
+$$
+\mathrm{E}[X]=np
+$$
+
+- Variance
+
+$$
+Var(X) = np(1-p)
+$$
+
+### Sum of Binomials
+Binomial RV is sum of Bernoulli RV's. \
+Let $X_1...X_n$ be independent $Bernoulli(p)$ RV's, then $X = X_1 + ...+ X_n$ has $Binomial(n,p)$ distribution. \
+Suppose $X \sim \operatorname{Bin}(n, p)$, $Y \sim \operatorname{Bin}(m, p)$. Define $Z=X+Y$. 
+Then 
+
+$$
+p_z(x=k)=\left(\begin{array}{c}
+n+m \\
+k
+\end{array}\right) p^k(1-p)^{n+m-k}
+$$
+
+That is, $Z \sim \operatorname{Bin}(n+m, p)$.
+
+### Examples
+
+#### * Fund Manager Performance
 
 #### Suppose a fund manager outperforms the market in a given year with probability $1/2$ and she underperforms the market with probability $1/2$. She has a track record of $10$ years and has outperformed the market in $8$ of the $10$ years. Moreover, performance in any one year is independent of performance in other years. How likely is a track record exactly as this?
 
@@ -63,3 +106,4 @@ Solving for $M$, $M = \frac{log(1-\alpha)}{10log(2)}$
 For example, if we choose $\alpha = 0.05$, then $M \approx 5.79$. This means that if there are fewer than 6 fund managers, we can expect the best one to outperform the market at least once purely by chance. If there are more than 6 fund managers, then we would expect at least one of them to outperform the market in all 10 years simply due to chance.
 
 In conclusion, if none of the fund managers have any skill, then the best-performing manager would need to achieve a performance that is significantly better than chance (as determined by the number of managers) in order to demonstrate any real skill.
+
