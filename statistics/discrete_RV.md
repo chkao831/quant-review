@@ -110,12 +110,29 @@ In conclusion, if none of the fund managers have any skill, then the best-perfor
 #### * Multiple Choice Guess
 #### Suppose you take an exam that contains 20 multiple choice questions. Each question has 4 possible options. You know the answer to 10 questions, but for the other 10 questions, you choose answers randomly. Each question worths a point. Let $X$ be your score on the exam. What is $P(X \gt 15)$?
 
+$$ X = 10 + Y $$
+
 $$
-\begin{align*}
-P(X = 16) &= \binom{10}{6}(0.25)^6(0.75)^4 \
-P(X = 17) &= \binom{10}{7}(0.25)^7(0.75)^3 \
-P(X = 18) &= \binom{10}{8}(0.25)^8(0.75)^2 \
-P(X = 19) &= \binom{10}{9}(0.25)^9(0.75)^1 \
-P(X = 20) &= \binom{10}{10}(0.25)^{10}(0.75)^0 \
-\end{align*}
+\begin{aligned}
+\begin{equation}
+P_Y(y)=\left(\begin{array}{c}
+10 \\
+y
+\end{array}\right)\left(\frac{1}{4}\right)^y\left(\frac{3}{4}\right)^{10-y}
+\end{equation}
+\end{aligned}
+$$
+
+
+Want $P_X(k)$ where $k=15, 16, ..., 20$.
+
+$$
+\begin{aligned}
+P(X=k) &= P(10+Y=k) \\
+&= P(Y=k-10)\\
+&= \left(\begin{array}{c}
+10 \\
+k-10
+\end{array}\right)\left(\frac{1}{4}\right)^{k-10}\left(\frac{3}{4}\right)^{20-k} \nonumber
+\end{aligned}
 $$
