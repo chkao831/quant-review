@@ -6,13 +6,18 @@ Let $A$ be the event that the fund manager outperforms the market in a given yea
 
 We want to find $P(X = 8)$, the probability that the fund manager outperforms the market in 8 out of 10 years. We can use the binomial distribution to compute this probability:
 
-$P(X=8)=\left(\begin{array}{c}10 \\ 8\end{array}\right)\left(\frac{1}{2}\right)^8\left(\frac{1}{2}\right)^2=45 \cdot \frac{1}{1024}=\frac{45}{1024}$
+$$
+P(X=8)=\left(\begin{array}{c}10 \\ 8\end{array}\right)\left(\frac{1}{2}\right)^8\left(\frac{1}{2}\right)^2=45 \cdot \frac{1}{1024}=\frac{45}{1024}
+$$
 
 Therefore, the probability of having a track record as good as this is $\frac{45}{1024}$, which is approximately 4.39%.
 
 #### How likely is a track record as good as this?
 
-$\mathrm{P}(X \geq 8)=\sum_{r=8}^n\left(\begin{array}{c}n \\ r\end{array}\right) p^r(1-p)^{n-r} = \left(\begin{array}{c}10 \\ 8\end{array}\right)\left(\frac{1}{2}\right)^8\left(\frac{1}{2}\right)^2 + \left(\begin{array}{c}10 \\ 9\end{array}\right)\left(\frac{1}{2}\right)^9\left(\frac{1}{2}\right)^1 + \left(\begin{array}{c}{10} \\ {10}\end{array}\right)\left(\frac{1}{2}\right)^{10}\left(\frac{1}{2}\right)^0$, which is approximately 5.47%.
+$$
+\mathrm{P}(X \geq 8)=\sum_{r=8}^n\left(\begin{array}{c}n \\ r\end{array}\right) p^r(1-p)^{n-r} = \left(\begin{array}{c}10 \\ 8\end{array}\right)\left(\frac{1}{2}\right)^8\left(\frac{1}{2}\right)^2 + \left(\begin{array}{c}10 \\ 9\end{array}\right)\left(\frac{1}{2}\right)^9\left(\frac{1}{2}\right)^1 + \left(\begin{array}{c}{10} \\ {10}\end{array}\right)\left(\frac{1}{2}\right)^{10}\left(\frac{1}{2}\right)^0 $$
+
+, which is approximately 5.47%.
 
 #### Suppose there are $M$ fund managers? How well should the best one do over the 10-year period if none of them had any skill?
 Assuming none of the fund managers have any skill, their performance will be determined purely by chance. Let's suppose that each manager has a 50/50 chance of outperforming the market in any given year, independent of all other managers.
