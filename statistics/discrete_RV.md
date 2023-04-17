@@ -1,4 +1,32 @@
+# Overview
+For a random variable $X$, 
+- CDF
+
+$$\mathrm{F}(x):=\mathrm{P}(X \leq x)$$
+
+
+- PMF\
+if $p(x) \geq 0$ and for all events $A$
+$$\mathrm{P}(X \in A)=\sum_{x \in A} p(x)$$
+
+- EV
+
+$$
+\mathrm{E}[X]:=\sum_i x_i p\left(x_i\right)
+$$
+
+- Variance
+
+$$
+\begin{aligned}
+\operatorname{Var}(X) & :=\mathrm{E}\left[(X-\mathrm{E}[X])^2\right] \\
+& =\mathrm{E}\left[X^2\right]-\mathrm{E}[X]^2
+\end{aligned}
+$$
+
 ## Binomial Distribution
+
+
 
 #### Suppose a fund manager outperforms the market in a given year with probability $1/2$ and she underperforms the market with probability $1/2$. She has a track record of $10$ years and has outperformed the market in $8$ of the $10$ years. Moreover, performance in any one year is independent of performance in other years. How likely is a track record exactly as this?
 
