@@ -167,3 +167,49 @@ This result comes from the power series expansion of the exponential function: $
 
 
 - Variance
+
+$$
+\begin{aligned}
+Var(X) &= E(X^2) - [E(X)]^2 \\
+&= \sum_{k=0}^{\infty} k^2 P(X=k) - \lambda^2 \\
+&= \sum_{k=0}^{\infty} k^2 \frac{\lambda^k}{k!} e^{-\lambda} - \lambda^2 \\
+&= e^{-\lambda} \sum_{k=1}^{\infty} k \frac{\lambda^k}{(k-1)!} - \lambda^2 \\
+&= e^{-\lambda} \lambda \sum_{j=0}^{\infty} (j+1) \frac{\lambda^{j}}{j!} - \lambda^2 \quad \text{ (substituting } j=k-1 \text{)} \\
+&= e^{-\lambda} \lambda \left[\sum_{j=0}^{\infty} j \frac{\lambda^{j}}{j!} + \sum_{j=0}^{\infty} \frac{\lambda^{j}}{j!}\right] - \lambda^2 \\
+&= e^{-\lambda} \lambda \left[\sum_{j=1}^{\infty} \frac{\lambda^{j-1}}{(j-1)!} + e^{\lambda}\right] - \lambda^2 \quad \text{ (splitting first term into j=0 and j>0)} \\
+&= e^{-\lambda} \lambda (\lambda e^{\lambda} + e^{\lambda}) - \lambda^2 \\
+&= \lambda e^{-\lambda} e^{\lambda} (\lambda + 1) - \lambda^2 \\
+&= \lambda (\lambda + 1) - \lambda^2 \\
+&= \lambda
+\end{aligned}
+$$
+
+
+### Poisson as an approximation of Binomial
+The Poisson distribution can be used as an approximation of the binomial distribution under certain conditions. Specifically, when the number of trials in a binomial distribution is very large and the probability of success is very small, the resulting distribution can be approximated by a Poisson distribution with a mean equal to the product of the number of trials and the probability of success.
+
+This is because the Poisson distribution is often used to model rare events, while the binomial distribution models the number of successes in a fixed number of trials. When the number of trials is large and the probability of success is small, the number of successes is also likely to be small, making the event rare. In this case, the Poisson distribution can be used to approximate the binomial distribution.
+
+In the case of a binomial distribution with $n$ trials and probability of success $p$, the mean is equal to $np$. If $n$ is very large and $p$ is very small, then $np$ is still relatively small and can be used as the mean of the Poisson distribution.
+
+Thus, the Poisson distribution can be used as an approximation of the binomial distribution when $np \le 10$ and $p \le 0.1$.
+
+### Sum of Poissons
+Suppose $X \sim \operatorname{Poisson}(\alpha)$, $Y \sim \operatorname{Poisson}(\beta)$. Define $Z=X+Y$. then $Z \sim \operatorname{Poisson}(\alpha + \beta)$.
+
+### Examples
+
+#### * Email Receipt 
+
+#### If 0.2 email is received per minute on average. What is the probability that no email is received in an inverval of 5 minutes?
+
+$$
+\lambda = 0.2 * 5 = 1 \Rightarrow P(X=0)=\frac{1^{0} e^{-1}}{0 !} \approx 0.3679
+$$
+
+#### What is the probability that there're more than 3 emails within 10 minutes?
+
+$$
+\lambda = 0.2 * 10 = 2 \Rightarrow P(X \gt 3)= 1 - (\frac{2^{0} e^{-2}}{0 !} + \frac{2^{1} e^{-2}}{1 !} + \frac{2^{2} e^{-2}}{2 !} + \frac{2^{3} e^{-2}}{3 !}) 
+$$
+
