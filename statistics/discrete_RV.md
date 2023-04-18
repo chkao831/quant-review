@@ -136,3 +136,34 @@ k-10
 \end{array}\right)\left(\frac{1}{4}\right)^{k-10}\left(\frac{3}{4}\right)^{20-k} \nonumber
 \end{aligned}
 $$
+
+## Poisson Distribution
+### Definition
+
+The Poisson distribution is a discrete probability distribution that describes the probability of a given number of events occurring in a fixed interval of time or space, given that these events occur at a constant average rate and independently of each other. 
+
+- PMF
+
+$$
+P(X=k)=\frac{\lambda^{k} e^{-\lambda}}{k !}
+$$
+
+where $X$ is the random variable representing the number of events in the interval, $k$ is a non-negative integer, $e$ is the mathematical constant approximately equal to 2.71828
+
+- EV
+
+$$
+\begin{aligned}
+E(X) &= \sum_{k=0}^{\infty} k P(X=k) \
+&= \sum_{k=0}^{\infty} k \frac{\lambda^k}{k!} e^{-\lambda} \
+&= e^{-\lambda} \sum_{k=1}^{\infty} \frac{\lambda^k}{(k-1)!} \
+&= e^{-\lambda} \lambda \sum_{j=0}^{\infty} \frac{\lambda^j}{j!} \quad \text{ (substituting } j=k-1 \text{)} \
+&= e^{-\lambda} \lambda e^{\lambda} \
+&= \lambda
+\end{aligned}
+$$
+
+This result comes from the power series expansion of the exponential function: $e^x = \sum_{j=0}^{\infty} \frac{x^j}{j!}$ in which we substitute $x = \lambda$.
+
+
+- Variance
