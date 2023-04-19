@@ -26,7 +26,7 @@ $$
 
 ## Binomial Distribution
 
-### Definition
+### :small_blue_diamond: Definition
 The binomial distribution is a discrete probability distribution that describes the number of successes in a fixed number of independent trials, where each trial has the same probability of success. It is denoted by $B(n,p)$, where $n$ is the number of trials and $p$ is the probability of success in each trial. 
 
 - PMF
@@ -52,7 +52,7 @@ $$
 Var(X) = np(1-p)
 $$
 
-### Sum of Binomials
+### :small_blue_diamond: Sum of Binomials
 Binomial RV is sum of Bernoulli RV's. \
 Let $X_1...X_n$ be independent $Bernoulli(p)$ RV's, then $X = X_1 + ...+ X_n$ has $Binomial(n,p)$ distribution. \
 Suppose $X \sim \operatorname{Bin}(n, p)$, $Y \sim \operatorname{Bin}(m, p)$. Define $Z=X+Y$. 
@@ -67,9 +67,9 @@ $$
 
 That is, $Z \sim \operatorname{Bin}(n+m, p)$.
 
-### Examples
+### :small_blue_diamond: Examples
 
-#### * Fund Manager Performance
+#### :notebook: Fund Manager Performance
 
 #### Suppose a fund manager outperforms the market in a given year with probability $1/2$ and she underperforms the market with probability $1/2$. She has a track record of $10$ years and has outperformed the market in $8$ of the $10$ years. Moreover, performance in any one year is independent of performance in other years. How likely is a track record exactly as this?
 
@@ -107,7 +107,7 @@ For example, if we choose $\alpha = 0.05$, then $M \approx 5.79$. This means tha
 
 In conclusion, if none of the fund managers have any skill, then the best-performing manager would need to achieve a performance that is significantly better than chance (as determined by the number of managers) in order to demonstrate any real skill.
 
-#### * Multiple Choice Guess
+#### :notebook: Multiple Choice Guess
 #### Suppose you take an exam that contains 20 multiple choice questions. Each question has 4 possible options. You know the answer to 10 questions, but for the other 10 questions, you choose answers randomly. Each question worths a point. Let $X$ be your score on the exam. What is $P(X \gt 15)$?
 
 $$ X = 10 + Y $$
@@ -138,7 +138,7 @@ k-10
 $$
 
 ## Poisson Distribution
-### Definition
+### :small_blue_diamond: Definition
 
 The Poisson distribution is a discrete probability distribution that describes the probability of a given number of events occurring in a fixed interval of time or space, given that these events occur at a constant average rate and independently of each other. 
 
@@ -165,6 +165,8 @@ $$
 
 This result comes from the power series expansion of the exponential function: $e^x = \sum_{j=0}^{\infty} \frac{x^j}{j!}$ in which we substitute $x = \lambda$.
 
+> :information_source: The power series expansion of the exponential function\
+> definition: 
 
 - Variance
 
@@ -185,7 +187,7 @@ Var(X) &= E(X^2) - [E(X)]^2 \\
 $$
 
 
-### Poisson as an approximation of Binomial
+### :small_blue_diamond: Poisson as an approximation of Binomial
 The Poisson distribution can be used as an approximation of the binomial distribution under certain conditions. Specifically, when the number of trials in a binomial distribution is very large and the probability of success is very small, the resulting distribution can be approximated by a Poisson distribution with a mean equal to the product of the number of trials and the probability of success.
 
 This is because the Poisson distribution is often used to model rare events, while the binomial distribution models the number of successes in a fixed number of trials. When the number of trials is large and the probability of success is small, the number of successes is also likely to be small, making the event rare. In this case, the Poisson distribution can be used to approximate the binomial distribution.
@@ -194,12 +196,12 @@ In the case of a binomial distribution with $n$ trials and probability of succes
 
 Thus, the Poisson distribution can be used as an approximation of the binomial distribution when $np \le 10$ and $p \le 0.1$.
 
-### Sum of Poissons
+### :small_blue_diamond: Sum of Poissons
 Suppose $X \sim \operatorname{Poisson}(\alpha)$, $Y \sim \operatorname{Poisson}(\beta)$. Define $Z=X+Y$. then $Z \sim \operatorname{Poisson}(\alpha + \beta)$.
 
-### Examples
+### :small_blue_diamond: Examples
 
-#### * Email Receipt 
+#### :notebook: Email Receipt 
 
 #### If 0.2 email is received per minute on average. What is the probability that no email is received in an inverval of 5 minutes?
 
