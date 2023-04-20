@@ -206,6 +206,24 @@ Thus, the Poisson distribution can be used as an approximation of the binomial d
 ### :small_blue_diamond: Sum of Poissons
 Suppose $X \sim \operatorname{Poisson}(\alpha)$, $Y \sim \operatorname{Poisson}(\beta)$. Define $Z=X+Y$. then $Z \sim \operatorname{Poisson}(\alpha + \beta)$.
 
+### :small_blue_diamond: Poisson Distribution is memoryless
+
+#### :notebook: Bus Waiting
+
+Suppose that buses arrive at the bus stop, on average, once every 10 minutes. We can model the time between bus arrivals using an exponential distribution with parameter $\lambda = 1/10$ (since the expected time between bus arrivals is 10 minutes).
+
+Now, suppose that a person arrives at the bus stop and has been waiting for 5 minutes already. What is the probability that the next bus arrives within the next 3 minutes?
+
+Since the Poisson process is memoryless, the probability of the next bus arriving within the next 3 minutes is the same as if the person had just arrived at the bus stop and was waiting for the first bus. This is because the Poisson process assumes that events occur independently and randomly over time, and the probability of an event occurring in a fixed time interval is determined solely by the expected rate of occurrence of the event.
+
+Therefore, the probability of the next bus arriving within the next 3 minutes is given by the probability that a bus arrives within the first 3 minutes of waiting. This can be calculated using the cumulative distribution function of the exponential distribution:
+
+$$
+P(X \leq 3)=\int_0^3 \lambda e^{-\lambda x} d x=1-e^{-\lambda 3} \approx 0.259
+$$
+
+So, the probability that the next bus arrives within the next 3 minutes is approximately 0.259, regardless of how long the person has already been waiting. This is an example of the memoryless property of the Poisson process.
+
 ### :small_blue_diamond: Examples
 
 #### :notebook: Email Receipt 
@@ -222,3 +240,53 @@ $$
 \lambda = 0.2 * 10 = 2 \Rightarrow P(X \gt 3)= 1 - (\frac{2^{0} e^{-2}}{0 !} + \frac{2^{1} e^{-2}}{1 !} + \frac{2^{2} e^{-2}}{2 !} + \frac{2^{3} e^{-2}}{3 !}) 
 $$
 
+## Geometric Distribution
+
+### :small_blue_diamond: Definition
+The geometric distribution is a probability distribution that models the number of trials needed to obtain the first success in a sequence of independent Bernoulli trials, where a "success" is an event with probability $p$ and a "failure" is an event with probability $(1-p)$, and the trials are repeated until the first success occurs.
+
+- PMF
+
+$$
+P(X = k) = (1-p)^{k-1} * p
+$$
+
+where $X$ is the number of trials needed to obtain the first success, $k$ is a positive integer, and $p$ is the probability of success in each trial.\
+In other words, if we repeatedly perform independent trials, each with probability $p$ of success, then the geometric distribution gives the probability that we will obtain the first success on the $k$-th trial.
+
+- EV
+
+$$
+\mathrm{E}[X]= \frac{1}{p}
+$$
+
+where $X$ is the random variable representing the number of trials needed to obtain the first success, and $p$ is the probability of success in each trial.
+
+Intuitively, the expected value represents the average number of trials required to obtain the first success. This makes sense since the more likely we are to succeed in each trial (i.e., the higher the value of $p$), the fewer trials we would expect to need to obtain the first success.
+
+- Variance
+
+$$
+Var(X) = \frac{1-p}{p^2}
+$$
+
+### :small_blue_diamond: Geometric Distribution is memoryless
+The geometric distribution is memoryless, which means that the probability of getting a success on the next trial does not depend on how many failures have been observed previously. This might seem a bit counterintuitive at first, but one way to think about it is to consider the following scenario:
+
+Suppose you are flipping a fair coin, and you want to know the probability of getting heads on the next flip, given that the previous three flips were tails. Since the coin is fair, the probability of getting heads on any given flip is 0.5, regardless of what happened on previous flips. Therefore, the probability of getting heads on the next flip is still 0.5, even though you have just observed three consecutive tails.
+
+Similarly, in the geometric distribution, the probability of getting a success on any given trial is fixed at $p$, regardless of how many failures have been observed previously. This is why the distribution is memoryless - the probability of success on the next trial does not depend on the outcome of previous trials. For example, if the probability of success is $p = 0.2$, then the probability of getting a success on the first trial is 0.2, the probability of getting a success on the second trial (given that the first trial was a failure) is still 0.2, and so on. This makes the geometric distribution a very simple and intuitive model for certain kinds of random processes.
+
+### :small_blue_diamond: Examples
+
+#### :notebook: Coin Tossing
+#### Given a fair coin, what is the total number of coin tosses until we observe the first head?
+The number of coin tosses until we observe the first head follows a geometric distribution with parameter $p=0.5$ (since we have a fair coin).
+
+The expected value of a geometric distribution with parameter $p$ is $E(X) = \frac{1}{p}$. Therefore, in this case, the expected number of coin tosses until we observe the first head is:
+
+$$
+\mathrm{E}[X]= \frac{1}{0.5} = 2
+$$
+
+So we would expect to flip the coin twice, on average, before observing the first head. Note that this is just an average - it is possible to observe the first head on the first flip, or to have to flip the coin many times before observing the first head.
