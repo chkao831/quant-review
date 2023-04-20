@@ -166,7 +166,14 @@ $$
 This result comes from the power series expansion of the exponential function: $e^x = \sum_{j=0}^{\infty} \frac{x^j}{j!}$ in which we substitute $x = \lambda$.
 
 > :information_source: The power series expansion of the exponential function\
-> definition: 
+> Intuitively, the power series expansion of the exponential function can be thought of as an infinite sum of terms, where each term is a power of the variable x divided by the factorial of the exponent. The larger the exponent, the smaller the contribution of each term, so the sum converges to the exponential function as the number of terms increases.\
+> In LaTeX form, the power series expansion of the exponential function can be written as: 
+> 
+> $$
+> e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!}
+> $$
+> 
+> Here, the summation symbol $\sum$ indicates that we are adding up all the terms from $n=0$ to infinity. The variable $x$ is raised to increasingly higher powers, starting from $x^0$ in the first term, $x^1$ in the second term, $x^2$ in the third term, and so on. Each term is divided by the factorial of its exponent, which ensures that the sum converges to the exponential function as the number of terms increases.
 
 - Variance
 
