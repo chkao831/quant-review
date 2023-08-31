@@ -42,6 +42,10 @@
                   | Bank 6 | 1.1415 | 1.1417 |
                   ```
                   Portfolio manager wants to sell USD 2 million against EUR: choose Bank 5 (EUR > USD; BUY EUR; 1.1411 is the lowest on the right)
+            - Interpreting FX Spot
+                - 1) Big Figure: refers to the first three or four digits of the price. It represents the major price level, usually corresponding to a whole number. The big figure is also sometimes called the "handle." For example, in the quote EUR/USD 1.1825, the "1.18" would be the big figure.
+                  2) Pips: A "pip" (percentage in point) is a standardized unit used to measure the smallest price movement in the forex market. Most currency pairs are quoted with four decimal places, except for the Japanese yen pairs, which are quoted with two decimal places. In the EUR/USD example, if the price changes from 1.1825 to 1.1835, that's a movement of 10 pips.
+                  3) Ticks: A "tick" is the smallest price movement of an asset in the market. In forex, a tick typically refers to a one-pip movement in the quoted price. 
     - Derivatives
         - Forwards
         - Futures
