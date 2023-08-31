@@ -17,6 +17,7 @@
 - Asset Classes
     - Securities
         - Shares (equities)
+        - Money Market Instruments 
         - FI/Credits
             - A bond is a tradeable loan
             - e.g. Gilts, Trasuries, T Bill, Certificates of Deposit, Commercial Paper
@@ -40,8 +41,7 @@
                   | Bank 5 | 1.1409 | 1.1411 |
                   | Bank 6 | 1.1415 | 1.1417 |
                   ```
-                  Portfolio manager want to sell USD 2 million against EUR: choose Bank 5 (EUR > USD; BUY EUR; 1.1411 is the lowest on the right)
-        - Money Market Instruments 
+                  Portfolio manager wants to sell USD 2 million against EUR: choose Bank 5 (EUR > USD; BUY EUR; 1.1411 is the lowest on the right)
     - Derivatives
         - Forwards
         - Futures
