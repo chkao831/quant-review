@@ -1,0 +1,36 @@
+- Pre-Trade/The Trade/Post-Trade
+    - Data Analytics (Pre-Trade): delivering data-driven insights, indices and products to customers
+    - Capital Markets (The Trade): support customer across the trade
+    - Post Trade: supporting customers' clearing and reporting obligations, providing risk and balance sheet etc.
+- Trading Basics
+    - Broker (specified #shares and price) -> broker places order on trading venue (order filled) -> pay and take ongoing ownership, settlement date T+2
+-  Exchange
+    - Bring buyers and sellers together in a centralized marketplace
+    - Exchange Traded: LSE / HKSE / Sing SE / FXAII / EBS / MarketAxes (bonds) / CME / TradeWeb, etc
+    - Dark Pools (Turquoise)
+    - OTC Products and Banks - FX, Swaps, Options
+- Order Book
+      - Bid Side (Buy Orders): This side lists all the buy orders in descending order of price. The highest bid price is at the top, indicating the highest price a buyer is willing to pay. As you move down the list, the bid prices decrease.
+    -Ask Side (Sell Orders): This side lists all the sell orders in ascending order of price. The lowest ask price is at the top, representing the lowest price at which a seller is willing to sell. As you move down the list, the ask prices increase.
+- Asset Classes
+    - Securities
+        - Shares (equities)
+        - FI/Credit
+        - Cash & FX
+            - FX: The exchange of one currency for another
+                - Most trades are for Spot
+                - Trading venue: 1) OTC 2) EBS (Electronic Broking Services) / Reuters 3000
+            - Hierarchy of currencies
+                - Euro - British Pound - Australian Dollar - New Zealand - USD  
+        - Money Market Instruments 
+    - Derivatives
+        - Forwards
+        - Futures
+        - Options
+        - Swaps
+        - CFDs 
+    - Alternatives
+        - Real estate
+        - Commodities
+        - Private Equity/Private Debt
+        - Infrastructure     
