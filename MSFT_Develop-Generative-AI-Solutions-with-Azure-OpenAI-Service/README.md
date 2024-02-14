@@ -9,6 +9,8 @@ Expires:	Tuesday, August 13, 2024\
 Is Retake:	No\
 Enable Labs:	Yes
 
+Access to your labs will expire on Monday, August 12, 2024 7:00 PM (GMT Standard Time)
+
 Access: https://esi.learnondemand.net/
 To redeem access key: FAEE79522539477F\
 Launch lab: https://esi.learnondemand.net/Lab/63584?instructionSetLang=en&classId=590436
