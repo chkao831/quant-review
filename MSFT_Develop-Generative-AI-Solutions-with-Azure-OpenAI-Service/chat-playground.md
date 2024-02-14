@@ -1,5 +1,10 @@
 You can use the following code to start integrating your current prompt and settings into your application\
 https://carolyn-kao.openai.azure.com/openai/deployments/carolyn-kao-model/chat/completions?api-version=2023-07-01-preview
+
+Training key: FAEE79522539477F
+
+[Launch lab 1 - Get started with Azure OpenAI Service](https://esi.learnondemand.net/Lab/63584?instructionSetLang=en&classId=590436)
+
 ```python3
 #Note: The openai-python library support for Azure OpenAI is in preview.
       #Note: This code sample requires OpenAI Python library version 0.28.1 or lower.
@@ -48,6 +53,60 @@ completion = openai.ChatCompletion.create(
   stop=None
 )
 ```
+
+```python3
+#Note: The openai-python library support for Azure OpenAI is in preview.
+      #Note: This code sample requires OpenAI Python library version 0.28.1 or lower.
+import os
+import openai
+
+openai.api_type = "azure"
+openai.api_base = "https://carolyn-kao.openai.azure.com/"
+openai.api_version = "2023-07-01-preview"
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+message_text = [{"role":"system","content":"This is a text message sentiment classifier."},{"role":"user","content":"Message: \"I loved the new adventure movie!\""},{"role":"assistant","content":"Sentiment: Positive"},{"role":"user","content":"Message text\n1. \"I loved the new adventure movie!\"\n2. \"I hate it when my phone battery dies\"\n3. \"My day has been 👍\"\n4. \"This is the link to the article\"\n5. \"This new music video is unreal\""},{"role":"assistant","content":"Sentiment:\n1. Positive\n2. Negative\n3. Positive\n4. Neutral\n5. Positive"}]
+
+completion = openai.ChatCompletion.create(
+  engine="carolyn-kao-model",
+  messages = message_text,
+  temperature=0.5,
+  max_tokens=800,
+  top_p=0.95,
+  frequency_penalty=0,
+  presence_penalty=0,
+  stop=None
+)
+```
+```python3
+#Note: The openai-python library support for Azure OpenAI is in preview.
+      #Note: This code sample requires OpenAI Python library version 0.28.1 or lower.
+import os
+import openai
+
+openai.api_type = "azure"
+openai.api_base = "https://carolyn-kao.openai.azure.com/"
+openai.api_version = "2023-07-01-preview"
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+message_text = [{"role":"system","content":"Ideas involving education and virtual reality"},{"role":"user","content":"1. Virtual Mars\nStudents get to explore Mars via virtual reality and go on missions to collect and catalog what they see.\n\n2."},{"role":"assistant","content":"Virtual Field Trips\nStudents can visit historical landmarks, museums, and natural wonders from the comfort of their classroom, enhancing their learning experience and understanding of the world.\n\n3. Virtual Science Experiments\nVirtual reality can allow students to conduct complex and potentially dangerous science experiments in a safe and controlled environment, providing hands-on learning opportunities.\n\n4. Language Immersion\nVirtual reality can create immersive language learning experiences, allowing students to practice their language skills in realistic scenarios and interact with virtual native speakers.\n\n5. Historical Reenactments\nStudents can virtually step into historical events and experience them firsthand, gaining a deeper understanding of the past and its impact on the present.\n\n6. Virtual Tutoring\nVirtual reality can provide personalized tutoring experiences, allowing students to receive one-on-one instruction and support tailored to their specific needs.\n\n7. Career Exploration\nVirtual reality can simulate different career environments, giving students the opportunity to explore various professions and make more informed decisions about their future career paths.\n\n8. Cultural Exchange\nStudents can virtually connect with students from different countries and cultures, fostering cross-cultural understanding and promoting global citizenship.\n\n9. Special Education Support\nVirtual reality can provide customized learning experiences for students with special needs, helping them overcome challenges and engage in interactive and inclusive learning.\n\n10. Virtual Classroom Collaboration\nVirtual reality can enable students from different locations to collaborate on projects and share ideas, fostering teamwork and enhancing their communication and problem-solving skills."}]
+
+completion = openai.ChatCompletion.create(
+  engine="carolyn-kao-model",
+  messages = message_text,
+  temperature=0.5,
+  max_tokens=800,
+  top_p=0.95,
+  frequency_penalty=0,
+  presence_penalty=0,
+  stop=None
+)
+```
+
 Note: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
+
+Probability settings: If you're asking for a response where there's only one right answer, you should specify lower values for these settings. If you're looking for a response that's not obvious, you might want to use higher values. 
+
 - Temperature: controls the degree to which response generation includes an element of randomness. The value of 0 used in your submission minimizes randomness, resulting in stable, predictable responses.
+- Top P
