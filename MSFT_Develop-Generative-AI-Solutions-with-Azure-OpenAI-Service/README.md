@@ -24,3 +24,6 @@ Launch lab: https://esi.learnondemand.net/Lab/63584?instructionSetLang=en&classI
   - Azure Portal: https://portal.azure.com/
   - Username: LabUser-37922488@cloudslice.onmicrosoft.com
   - Password: M+6e!jJ0Da
+
+
+Module documentation: https://microsoftlearning.github.io/mslearn-openai/
