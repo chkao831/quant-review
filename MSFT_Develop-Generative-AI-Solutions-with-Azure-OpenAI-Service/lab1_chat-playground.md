@@ -110,3 +110,4 @@ Probability settings: If you're asking for a response where there's only one rig
 
 - Temperature: controls the degree to which response generation includes an element of randomness. The value of 0 used in your submission minimizes randomness, resulting in stable, predictable responses.
 - Top P
+
