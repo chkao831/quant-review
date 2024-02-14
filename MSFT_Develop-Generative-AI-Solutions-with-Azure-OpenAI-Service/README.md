@@ -8,3 +8,17 @@ Completion Status:	Unknown\
 Expires:	Tuesday, August 13, 2024\
 Is Retake:	No\
 Enable Labs:	Yes
+
+Access: https://esi.learnondemand.net/
+To redeem access key: FAEE79522539477F\
+Launch lab: https://esi.learnondemand.net/Lab/63584?instructionSetLang=en&classId=590436
+
+  Sign into Windows using the following credentials:
+
+  - User name: Student
+  - Password: Pa55w.rd
+
+  For access to Azure, use the following credentials:
+  - Azure Portal: https://portal.azure.com/
+  - Username: LabUser-37922488@cloudslice.onmicrosoft.com
+  - Password: M+6e!jJ0Da
